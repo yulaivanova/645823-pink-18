@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Юлия Иванова](https://up.htmlacademy.ru/adaptive/18/user/645823).
-* Наставник: `Неизвестно`.
+* Наставник: `nobody`.
 
 ---
 
