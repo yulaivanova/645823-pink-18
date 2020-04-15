@@ -1,0 +1,107 @@
+.contacts__wrapper {
+  padding: 50px 44px;
+  text-align: center;
+}
+
+.contacts__title {
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 300;
+  color: $gray-font;
+
+  @media (min-width: $tablet-width) {
+    font-size: 40px;
+    margin: 0 110px 57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 50px;
+    margin: 0 250px 70px;
+  }
+}
+
+.contacts__items {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}
+
+.contacts__map {
+  position: relative;
+  width: 100%;
+  height: 200px;
+
+  @media (min-width: $tablet-width) {
+    height: 356px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 523px;
+  }
+
+}
+
+.contacts__item {
+  @media (min-width: $tablet-width) {
+    width: 50%;
+
+    &:nth-child(2) {
+      order: 3;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+
+    &:nth-child(3) {
+      order: 3;
+    }
+  }
+}
+.contacts__item-title {
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: $gray-font;
+
+}
+
+.contacts__item-info {
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 300;
+  color: $pink;
+}
+
+.contacts__item-info--mail {
+  &:hover {
+    text-decoration: underline;
+    color: $gray-font;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.contacts__map {
+  position: relative;
+}
+
+.contacts__map::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  border-right: 50vw solid transparent;
+  border-top: 35px solid $white;
+  border-left: 50vw solid transparent;
+}

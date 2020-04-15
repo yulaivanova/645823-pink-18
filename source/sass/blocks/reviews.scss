@@ -1,0 +1,137 @@
+.reviews {
+  position: relative;
+}
+
+.reviews__list {
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+  padding-top: 30px;
+  min-height: 150px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 300px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    min-height: 400px;
+  }
+}
+
+.reviews__switcher,
+.reviews__radio-wrapper {
+  display: none;
+}
+
+.reviews__item {
+  text-align: center;
+  padding-top: 49px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  opacity: 0;
+  box-sizing: border-box;
+  width: 100%;
+
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 193px;
+  }
+}
+
+.reviews__buttons {
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    width: calc(100% - 260px);
+    justify-content: space-between;
+    padding: 0 130px;
+  }
+}
+
+.reviews__btn {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    z-index: 3;
+    display: inline-block;
+    cursor: pointer;
+    top: -230px;
+
+    font-size: 30px;
+    color: $gray-font;
+    opacity: 0.3;
+  }
+}
+
+.reviews__item--active{
+  opacity: 1;
+  z-index: 2;
+}
+
+.reviews__item::before {
+  @media (min-width: $desktop-width) {
+    content: "";
+    position: absolute;
+    background-image: url(../img/icon-quotes.svg);
+    background-repeat: no-repeat;
+    width: 79px;
+    height: 63px;
+    right: 45%;
+    top: 20%;
+  }
+}
+
+.reviews__author {
+  margin: 0;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  color: $black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
+}
+
+.reviews__author-description {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    color: $gray-font;
+  }
+}
+
+.reviews__text {
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+  color: $gray-font;
+  padding: 25px 22px;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 53px 22px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    width: 685px;
+    margin: 0 auto;
+    padding-bottom: 44px;
+  }
+}
+

@@ -1,0 +1,199 @@
+.price {
+  padding-top: 110px;
+  background-color: $white;
+  background-image: linear-gradient(178deg, transparent 55px, $gray 0);
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 70px;
+  }
+}
+
+.price__wrapper {
+  @media (max-width:699px) {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.price__list {
+  width: 840px;
+  box-sizing: border-box;
+  transform: translateX(0);
+
+  @media (min-width: $tablet-width) {
+    transform: none;
+    width: 620px;
+    margin: 0 auto;
+  }
+}
+
+.price__list-head {
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $gray-font;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+}
+
+.price__switcher {
+  display: none
+}
+
+.price__value {
+  position: relative;
+  box-sizing: border-box;
+  min-width: 278px;
+  padding-top: 16px;
+  padding-bottom: 20px;
+
+  & p {
+    margin: 0;
+    font-weight: 300;
+
+    @media (min-width: $desktop-width) {
+      font-size: 24px;
+      font-weight: 400;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    min-width: 153px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 254px;
+  }
+}
+
+.price__value--empty {
+  @media (min-width: $tablet-width) {
+    empty-cells: hide;
+  }
+}
+
+
+
+@media (max-width:699px) {
+  .price__value--empty {
+    display: none;
+  }
+  .price__field--empty {
+    display: none;
+  }
+
+  #price-radio-1:checked~.price__list {
+      transform: translateX(280px);
+      transition: .5s;
+  }
+  #price-radio-2:checked~.price__list {
+      transform: translateX(0);
+      transition: .5s
+  }
+  #price-radio-3:checked~.price__list {
+      transform: translateX(-280px);
+      transition: .5s
+  }
+  #price-radio-1:checked~.price__nav label[for=price-radio-1],
+  #price-radio-2:checked~.price__nav label[for=price-radio-2],
+  #price-radio-3:checked~.price__nav label[for=price-radio-3] {
+      background-color: $pink;
+  }
+}
+
+.price__field {
+  position: relative;
+  padding: 22px 110px 23px 22px;
+  border: 2px solid #e5e5e5;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $gray-font;
+  border-collapse: separate;
+  background-color: $white;
+
+  @media (min-width: $tablet-width) {
+    padding: 15px 0 14px 15px;
+    text-transform: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+  }
+}
+
+.price__field--ok,
+.price__field--cancel {
+  @media (min-width: $tablet-width) {
+    font-size: 0;
+    padding: 0;
+  }
+}
+
+.price__field--ok::after {
+  content: "";
+  position: absolute;
+  right: 21px;
+  background-image: url(../img/icon-yes.svg);
+  width: 31px;
+  height: 21px;
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    left: 40%;
+  }
+}
+
+.price__field--cancel::after {
+  content: "";
+  position: absolute;
+  right: 21px;
+  background-image: url(../img/icon-no.svg);
+  width: 27px;
+  height: 26px;
+  background-repeat: no-repeat;
+  @media (min-width: $tablet-width) {
+    left: 40%;
+  }
+}
+
+.price__value--hit::before {
+  content: '';
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-image: url(../img/hit_ribbon.png);
+  width: 74px;
+  height: 73px;
+}
+
+.price__value--hit::after {
+  content: 'ХИТ';
+  position: absolute;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $white;
+  top: 11px;
+  left: 13px;
+  transform: rotate(-45deg);
+}
+
+
+

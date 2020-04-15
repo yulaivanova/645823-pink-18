@@ -1,0 +1,148 @@
+.user-photo__panorama {
+  width: 100%;
+}
+
+.user-photo--photo-of-the-day {
+  position: relative;
+  margin: 0;
+}
+
+.user-photo--photo-of-the-day::after {
+  content: "Панорама дня";
+  position: absolute;
+  width: 140px;
+  height: 36px;
+  top: 0;
+  left: 160px;
+  background-color: $pink;
+  font-size: 12px;
+  line-height: 33px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: $white;
+
+  @media (min-width: $tablet-width) {
+    left: 500px;
+    top: 57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 930px;
+  }
+}
+
+.user-photo__caption {
+  margin: 0 0 20px;
+  background-color: $gray;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 31px;
+    min-height: 155px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+}
+
+.user-photo__caption--panorama {
+  margin: 0 20px 20px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 31px;
+    min-height: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 130px 50px;
+  }
+}
+
+.user-photo__author {
+  margin: 0;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  color: $gray-font;
+  padding-top: 25px;
+  padding-left: 17px;
+
+  & span {
+    font-weight: 300;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+  }
+}
+
+.user-photo__content {
+  padding: 15px 42px 15px 17px;
+  margin: 0;
+
+  @media (min-width: $desktop-width) {
+    padding: 0 42px 23px 17px;
+  }
+}
+
+.user-photo__content--panoram {
+  @media (min-width: $tablet-width) {
+    order: 1;
+    padding-right: 74px;
+  }
+}
+
+.user-photo__footer {
+  padding-left: 18px;
+  padding-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    align-content: flex-end;
+  }
+
+}
+
+.user-photo__footer--panoram {
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+.user-photo__icon-heart {
+  fill: $pink;
+  padding-right: 18px;
+
+  @media (min-width: $tablet-width) {
+    order: 2;
+    padding-left: 17px;
+    padding-right: 29px;
+  }
+}
+
+.user-photo__likes {
+  margin: 0;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $pink;
+}
+
+.user-photo__mobile-image {
+  width: 100%;
+}

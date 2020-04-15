@@ -1,0 +1,41 @@
+.slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-width: 59px;
+  min-height: 12px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 21px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.slider.price__nav {
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.slider__btn {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+  line-height: 0;
+  width: 6px;
+  height: 6px;
+  margin-right: 20px;
+  background-color: #bec2c7;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider__btn:hover {
+  background-color: $pink;
+}
+
+.slider__btn:active {
+  background-color: $pink;
+}

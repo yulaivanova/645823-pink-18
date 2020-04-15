@@ -1,0 +1,35 @@
+.social__list {
+  @include list-reset;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social__icon {
+  fill: $pink;
+  position: absolute;
+  left: 39%;
+  top: 28%;
+}
+
+.social__item {
+  position: relative;
+  margin-right: 17px;
+  border: 3.0px solid $gray-light;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+
+  &:hover {
+    border: 3.0px solid $gray-font;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+}
+
+
+
+

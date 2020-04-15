@@ -1,0 +1,64 @@
+.controls {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}
+
+.controls--size {
+  display: block;
+  margin-bottom: 40px;
+}
+
+.controls__scale {
+  position: relative;
+  margin-top: 10px;
+}
+
+.controls__bar {
+  height: 2px;
+  background-color: #283645;
+  width: 202px;
+  margin-right: 15px;
+
+  @media (min-width: $desktop-width) {
+    width: 288px;
+  }
+
+}
+
+.controls--size {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.controls__toggle {
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  top: -6px;
+  left: 14px;
+  background-color: #f2f2f2;
+  border: 2px solid #cd2856;
+  border-radius: 50%;
+
+  &:active {
+    background-color: #cd2856;;
+  }
+}
+
+.controls__toggle--contrast {
+  left: 120px;
+}
+
+.controls__toggle--crop {
+  left: 146px;
+}
+
+.controls__toggle--fill {
+  left: 25px;
+}

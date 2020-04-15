@@ -1,0 +1,67 @@
+.radio__label {
+
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  color: $gray-font;
+  position: relative;
+  display: block;
+  user-select: none;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
+}
+
+.radio__label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -65px;
+  top: -3px;
+
+  width: 36px;
+  height: 36px;
+  border:  2.0px solid #e5e5e5;
+  // box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  background-color: $white;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+    top: -5px;
+    left: -61px;
+  }
+}
+
+.radio__label:hover::before {
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+  border: 2.0px solid $gray-font;
+}
+
+.radio__label:active::before {
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.3);
+  border:  2.0px solid $pink;
+  outline: none;
+}
+
+.radio__input:checked + .radio__label::before {
+  content: "";
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: radial-gradient(circle, $pink 8px, $white 0);
+  left: -65px;
+  top: -3px;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+    top: -5px;
+    left: -61px;
+    background: radial-gradient(circle, $pink 8px, $white 0);
+  }
+}

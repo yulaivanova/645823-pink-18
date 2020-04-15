@@ -1,0 +1,74 @@
+.field__label {
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $pink;
+  padding-left: 20px;
+  padding-bottom: 13px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 22px;
+  }
+}
+
+.field__input {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  color: $gray-font;
+  border: 2.0px solid #e5e5e5;
+  padding: 22px 20px 18px;
+  margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    margin-bottom: 56px;
+    padding: 14px 20px;
+  }
+
+  &:hover {
+    border: 2.0px solid $gray-font;
+  }
+
+  &:active {
+    border: 2.0px solid $pink;
+  }
+}
+
+.field__input--icon {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 17px;
+    width: calc(100% - 42px);
+    position: relative;
+  }
+}
+
+.field__icon {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    margin-top: 22px;
+    margin-left: 22px;
+  }
+}
+
+
+.field__icon-wrapper {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    width: 60px;
+    height: 58px;
+    background-color: #e5e5e5;
+    text-align: center;
+  }
+}
+
+.field {
+  @media (min-width: $tablet-width) {
+    position: relative;
+  }
+}
